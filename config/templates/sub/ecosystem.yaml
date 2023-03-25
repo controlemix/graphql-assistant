@@ -1,0 +1,143 @@
+apps:
+  - name: CLAIM-API
+    script: ./src/index.js
+    cwd: .
+    interpreter: node
+    exec_interpreter: node
+    exec_mode: cluster
+    instances: 1
+    max_memory_restart: 256M
+    source_map_support: true
+    instance_var: NODE_APP_INSTANCE
+    treekill: true
+    min_uptime: 5000
+    listen_timeout: 8000
+    kill_timeout: 1600
+    wait_ready: true
+    max_restarts: 100000
+    restart_delay: 500
+    autorestart: true
+    cron_restart: 1 0 * * *
+    vizion: false
+    force: true
+    shutdown_with_message: true
+    log_date_format: YYYY-MM-DD HH:mm Z
+    error_file: ./logs/errors/error.log
+    out_file: ./logs/out.log
+    combine_logs: true
+    log_type: raw
+    env:
+      CORS_HEADER:
+        - https://studio.apollographql.com
+    env_development:
+      namespace: development
+      NODE_ENV: development
+      node_args: -r esm environment=development
+      watch:
+        - src/schema/types
+        - src/index.js
+        - packages
+        - package.json
+      DATABASE01_USER: U1JWU1JP
+      DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
+      DATABASE01_DB_NAME: U1JP
+      DATABASE01_HOST: MTAuMTQwLjE4LjQz
+      DATABASE01_PORT: 1433
+      SERVICE_NAME: CLAIM
+      SERVICE_MOCK: 0
+      ENDPOINT_HEALTH: /.well-known/apollo/server-health
+      SCHEMA_CONFIG: pattern-001.yaml
+      GRAPHQL_PATH: /graphql
+      API_URL: https://api-dev.prudential.com/pob/sro/datalake/claim
+      PORT: 8080
+      AUTO_RESTART: 1
+      GATEWAY_AUTH: 1
+      GATEWAY_AUTH_TYPE: local
+      GATEWAY_CREDENTIALS_USER: lOlbDsUnQftV1lQe9NGfUGkwpLAdxzGn
+      GATEWAY_CREDENTIALS_PASS: sAUkA0OgGtzZnmEzUkXX5iRiMShLlFeczigSydD2kauCZLOeGGqjCCJtDQF4A7Uk6AaODbBjNfc0gmdXPFITnQ
+      GATEWAY_URL: https://api-dev.prudential.com/pob/sro/gateway
+      CORS_HEADER:
+        - http://localhost:8080
+    env_localhostp:
+      namespace: localhostp
+      NODE_ENV: localhostp
+      node_args: -r esm environment=localhostp
+      watch:
+        - src/schema/types
+        - src/index.js
+        - packages
+        - package.json
+      DATABASE01_USER: U1JWU1JP
+      DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
+      DATABASE01_DB_NAME: U1JP
+      DATABASE01_HOST: MTAuMTQwLjE4LjQz
+      DATABASE01_PORT: 1433
+      SERVICE_NAME: CLAIM
+      SERVICE_MOCK: 0
+      ENDPOINT_HEALTH: /.well-known/apollo/server-health
+      SCHEMA_CONFIG: pattern-001.yaml
+      GRAPHQL_PATH: /graphql
+      API_URL: http://localhost:8019
+      PORT: 8019
+      AUTO_RESTART: 1
+      GATEWAY_AUTH: 1
+      GATEWAY_AUTH_TYPE: local
+      GATEWAY_CREDENTIALS_USER: lOlbDsUnQftV1lQe9NGfUGkwpLAdxzGn
+      GATEWAY_CREDENTIALS_PASS: sAUkA0OgGtzZnmEzUkXX5iRiMShLlFeczigSydD2kauCZLOeGGqjCCJtDQF4A7Uk6AaODbBjNfc0gmdXPFITnQ
+      GATEWAY_URL: https://api-dev.prudential.com/pob/sro/gateway:4000
+      CORS_HEADER:
+        - http://localhost:8080
+    env_localhosta:
+      namespace: localhosta
+      NODE_ENV: localhosta
+      node_args: -r esm environment=localhosta
+      watch:
+        - src/schema/types
+        - src/index.js
+        - packages
+        - package.json
+      DATABASE01_USER: c2E=
+      DATABASE01_PASS: U3JvcHJvZDE0MzMwIQ==
+      DATABASE01_DB_NAME: U1JP
+      DATABASE01_HOST: MzQuMjM3LjE1Ny4xNTQ=
+      DATABASE01_PORT: 14330
+      SERVICE_NAME: CLAIM
+      SERVICE_MOCK: 0
+      ENDPOINT_HEALTH: /.well-known/apollo/server-health
+      SCHEMA_CONFIG: pattern-001.yaml
+      GRAPHQL_PATH: /graphql
+      API_URL: http://localhost:8019
+      PORT: 8019
+      AUTO_RESTART: 1
+      GATEWAY_AUTH: 1
+      GATEWAY_AUTH_TYPE: local
+      GATEWAY_CREDENTIALS_USER: lOlbDsUnQftV1lQe9NGfUGkwpLAdxzGn
+      GATEWAY_CREDENTIALS_PASS: sAUkA0OgGtzZnmEzUkXX5iRiMShLlFeczigSydD2kauCZLOeGGqjCCJtDQF4A7Uk6AaODbBjNfc0gmdXPFITnQ
+      GATEWAY_URL: https://api-dev.prudential.com/pob/sro/gateway:4000
+      CORS_HEADER:
+        - http://localhost:8080
+    env_test:
+      namespace: test
+      NODE_ENV: test
+      node_args: -r esm environment=test
+      watch: false
+      DATABASE01_USER: U1JWU1JP
+      DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
+      DATABASE01_DB_NAME: U1JP
+      DATABASE01_HOST: MTAuMTQwLjE4LjQz
+      DATABASE01_PORT: 1433
+      SERVICE_NAME: CLAIM
+      SERVICE_MOCK: 1
+      ENDPOINT_HEALTH: /.well-known/apollo/server-health
+      SCHEMA_CONFIG: pattern-001.yaml
+      GRAPHQL_PATH: /graphql
+      API_URL: http://localhost:8019
+      PORT: 0
+      AUTO_RESTART: 0
+      GATEWAY_AUTH: 1
+      GATEWAY_AUTH_TYPE: local
+      GATEWAY_CREDENTIALS_USER: user
+      GATEWAY_CREDENTIALS_PASS: xpto
+      GATEWAY_URL: http://localhost:4000
+      CORS_HEADER:
+        - http://localhost:8080

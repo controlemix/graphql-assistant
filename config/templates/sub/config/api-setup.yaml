@@ -1,0 +1,91 @@
+api:
+  name: pm2appname
+  packName: subschema-tools
+  modName: subgraph-tools
+  modVer: 0
+  modCopy: true
+  createFiles: true
+  skipExistingFiles: false
+  recreateTypeFiles: true
+  recreateArgs: true
+  recreateFields: true
+
+package:
+  recreate: false
+  name: appname
+  version: 1.0.0
+  env: localhosta
+  dependencies:
+    - subgraph-tools: file:packages/subgraph-tools-last.tgz
+
+ecosystem:
+  recreate: false
+  GRAPHQL_PATH: /graphql
+  SCHEMA_CONFIG: pattern-001.yaml
+  development:
+    namespace: development
+    NODE_ENV: development
+    node_args: -r esm environment=development
+    watch:
+      - src/schema/types
+      - src/index.js
+      - packages
+      - package.json
+    DATABASE01_USER: U1JWU1JP
+    DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
+    DATABASE01_DB_NAME: U1JP
+    DATABASE01_HOST: MTAuMTQwLjE4LjQz
+    DATABASE01_PORT: 1433
+    PORT: 8080
+    API_URL: https://api-dev.prudential.com/pob/sro/gateway
+
+  localhostp:
+    namespace: localhostp
+    NODE_ENV: localhostp
+    node_args: -r esm environment=localhostp
+    watch:
+      - src/schema/types
+      - src/index.js
+      - packages
+      - package.json
+    DATABASE01_USER: U1JWU1JP
+    DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
+    DATABASE01_DB_NAME: U1JP
+    DATABASE01_HOST: MTAuMTQwLjE4LjQz
+    DATABASE01_PORT: 1433
+    PORT: 8019
+    API_URL: http://localhost:8019
+
+  localhosta:
+    namespace: localhosta
+    NODE_ENV: localhosta
+    node_args: -r esm environment=localhosta
+    watch:
+      - src/schema/types
+      - src/index.js
+      - packages
+      - package.json
+    DATABASE01_USER: U1JWU1JP
+    DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
+    DATABASE01_DB_NAME: U1JP
+    DATABASE01_HOST: MTAuMTQwLjE4LjQz
+    DATABASE01_PORT: 1433
+    PORT: 8019
+    API_URL: http://localhost:8019
+
+  test:
+    namespace: test
+    NODE_ENV: test
+    node_args: -r esm environment=test
+    watch:
+      - src/schema/types
+      - src/index.js
+      - packages
+      - package.json
+    DATABASE01_USER: U1JWU1JP
+    DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
+    DATABASE01_DB_NAME: U1JP
+    DATABASE01_HOST: MTAuMTQwLjE4LjQz
+    DATABASE01_PORT: 1433
+    PORT: 0
+    API_URL: http://localhost:8019

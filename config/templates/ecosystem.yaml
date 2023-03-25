@@ -1,0 +1,125 @@
+apps:
+  - name: XPTO-API
+    script: ./src/index.js
+    cwd: .
+    interpreter: node
+    exec_interpreter: node
+    exec_mode: cluster
+    instances: 1
+    increment_var: PORT
+    interpreter_args: -r esm
+    args: -r esm    
+    max_memory_restart: 256M
+    source_map_support: true
+    instance_var: NODE_APP_INSTANCE
+    treekill: true
+    min_uptime: 5000
+    listen_timeout: 8000
+    kill_timeout: 1600
+    wait_ready: false
+    max_restarts: 100000
+    restart_delay: 4000
+    autorestart: true
+    cron_restart: 1 0 * * *
+    vizion: false
+    force: true
+    shutdown_with_message: true
+    log_date_format: YYYY-MM-DD HH:mm Z
+    error_file: ./logs/errors/error.log
+    out_file: ./logs/out.log
+    combine_logs: true
+    log_type: raw
+    env:
+      CORS_HEADER:
+        - https://studio.apollographql.com
+        - https://studio.apollographql.com/sandbox/explorer
+        - http://localhost
+        - https://fonts.googleapis.com
+        - https://cdn.jsdelivr.net
+        - https://code.jquery.com
+        - https://apollo-server-landing-page.cdn.apollographql.com
+        - https://sentry.io
+        - https://cdn.ravenjs.com
+        - https://js.recurly.com
+        - https://studio-ui-deployments.apollographql.com
+        - https://fonts.gstatic.com
+        - https://www.gstatic.com
+        - https://www.googletagmanager.com
+ 
+    env_development:
+      namespace: development
+      NODE_ENV: development
+      node_args: environment=development
+      watch: false
+      DATABASE01_USER: XPTO
+      DATABASE01_PASS: XPTO
+      DATABASE01_DB_NAME: XPTO
+      DATABASE01_HOST: XPTO
+      DATABASE01_PORT: 1433
+      SERVICE_NAME: XPTO
+      SERVICE_MOCK: 0
+      ENDPOINT_HEALTH: /.well-known/apollo/server-health
+      SCHEMA_CONFIG: schemaDb1.yaml
+      GRAPHQL_PATH: /
+      API_URL: http://localhost
+      PORT: 8080
+      AUTO_RESTART: 1
+      GATEWAY_AUTH: 1
+      GATEWAY_AUTH_TYPE: local
+      GATEWAY_CREDENTIALS_USER: USER
+      GATEWAY_CREDENTIALS_PASS: XPTO
+      GATEWAY_URL: http://localhost
+      CORS_HEADER:
+        - http://localhost
+
+    env_localhost:
+      namespace: localhost
+      NODE_ENV: localhost
+      node_args: environment=localhost
+      watch: false
+      DATABASE01_USER: XPTO
+      DATABASE01_PASS: XPTO
+      DATABASE01_DB_NAME: XPTO
+      DATABASE01_HOST: XPTO
+      DATABASE01_PORT: 1433
+      SERVICE_NAME: POLICY
+      SERVICE_MOCK: 0
+      ENDPOINT_HEALTH: /.well-known/apollo/server-health
+      SCHEMA_CONFIG: schemaDb1.yaml
+      GRAPHQL_PATH: /
+      API_URL: http://localhost:8093
+      PORT: 8093
+      AUTO_RESTART: 1
+      GATEWAY_AUTH: 1
+      GATEWAY_AUTH_TYPE: local
+      GATEWAY_CREDENTIALS_USER: user
+      GATEWAY_CREDENTIALS_PASS: xpto
+      GATEWAY_URL: http://localhost:4000
+      CORS_HEADER:
+        - http://localhost:4000
+   
+    env_test:
+      namespace: test
+      NODE_ENV: test
+      node_args: environment=test
+      watch: false
+      DATABASE01_USER: XPTO
+      DATABASE01_PASS: XPTO
+      DATABASE01_DB_NAME: XPTO
+      DATABASE01_HOST: XPTO
+      DATABASE01_PORT: 1433
+      SERVICE_NAME: XPTO
+      SERVICE_MOCK: 1
+      ENDPOINT_HEALTH: /.well-known/apollo/server-health
+      SCHEMA_CONFIG: schemaDb1.yaml
+      GRAPHQL_PATH: /
+      API_URL: http://localhost:8093 
+      PORT: 0
+      AUTO_RESTART: 0
+      GATEWAY_AUTH: 1
+      GATEWAY_AUTH_TYPE: basic
+      GATEWAY_CREDENTIALS_USER: user
+      GATEWAY_CREDENTIALS_PASS: xpto
+      GATEWAY_URL: http://localhost:4000
+      CORS_HEADER:
+        - http://localhost:4000

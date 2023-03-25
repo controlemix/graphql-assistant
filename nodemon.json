@@ -1,0 +1,21 @@
+{
+    "verbose": true,
+    "watch": [ 
+      "../superschema-tools/src/**",
+      "../subschema-tools/src/**",
+      "src/core/**",      
+      "src/index.js"
+    ],
+    "ext": "js",
+    "ignore": [
+      ".git",
+      ".gql",
+      ".graphql",
+      "node_modules/**/node_modules",
+      "logs",
+      ".scannerwork",
+      "coverage"
+    ],
+
+    "delay": 1000
+  }

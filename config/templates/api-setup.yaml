@@ -1,0 +1,41 @@
+api:
+  name: POLICY
+  packName: subschema-tools
+  modName: subgraph-tools
+  modVer: 1.3.7
+  modCopy: true
+  createFiles: true
+  skipExistingFiles: false
+  recreateTypeFiles: true
+  recreateArgs: true
+  recreateFields: true
+package:
+  recreate: true
+  name: pob-sro-graphql-policy
+  version: 2.0.0
+  dependencies:
+    - subgraph-tools: 'file:packages/subgraph-tools-1.3.7.tgz'
+ecosystem:
+  recreate: true
+  GRAPHQL_PATH: /
+  SCHEMA_CONFIG: pattern-001.yaml
+  development:
+    DATABASE01_USER: U1JWU1JP
+    DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
+    DATABASE01_DB_NAME: U1JP
+    DATABASE01_HOST: MTAuMTQwLjE4LjQz
+    DATABASE01_PORT: 1433
+    PORT: 8080
+    API_URL: 'https://api-dev.prudential.com/pob/sro/gateway'
+  localhost:
+    DATABASE01_USER: c2E=
+    DATABASE01_PASS: U3JvcHJvZDE0MzMwIQ==
+    DATABASE01_DB_NAME: U1JP
+    DATABASE01_HOST: MzQuMjM3LjE1Ny4xNTQ=
+    DATABASE01_PORT: 14330
+    PORT: 8093
+    API_URL: 'http://localhost:8093'
+    watch:
+      - src/schema/types
+      - src/index.js
+      - package.json

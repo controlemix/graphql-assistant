@@ -1,0 +1,195 @@
+args:
+  active: true
+  override: false
+  fields:
+    - claimNumber:
+      name: claimNumber
+      active: true
+      type: Claim
+      typeGraphQL: GraphQLString
+      required: false    
+      description: The Claim code to return
+  extraConditions:
+    - sqlExpr:
+        - AND 
+
+definitions:
+  active: true
+  typeName: Claim
+  description: Claim type
+  argsTypeName: argsClaimType
+  typeArgsName: claimArgs
+  adaptTypeName: claimAdapt
+  override: false
+  resolver: true
+  resolveType: true
+  isNode: true
+
+joinFields:
+  active: false
+  override: false
+  list: false
+  fields: false
+
+unionTypes:
+  - tableName: claim
+    typeName: ILI
+    objectTypeName: ClaimILI
+    active: true
+    tableDb: ili_tb_claim
+  - tableName: claim
+    typeName: GLI
+    objectTypeName: ClaimGLI
+    active: true
+    tableDb: gli_tb_claim
+objFields:
+  - id:
+      active: true
+      pattern: key-id-v20
+      columns:
+        - claim_nr
+        - claim_nr
+  - clearID:
+      active: true
+      pattern: key-cle-v20
+      columns:
+        - claim_nr
+        - claim_nr
+  - sourceSystem:
+      active: true
+      pattern: key-srs-v20
+      columns:
+        - ILI
+        - GLI
+  - loadDate:
+      active: true
+      pattern: date-dt-time
+      columns:
+        - insert_dt
+        - insert_dt
+  - updateDate:
+      active: true
+      pattern: date-dt-time
+      columns:
+        - update_dt
+        - update_dt
+  - claimNumber:
+      active: true
+      pattern: str-var-20
+      columns:
+        - claim_nr
+        - claim_nr
+  - policyNumber:
+      active: true
+      pattern: str-var-20
+      columns:
+        - policy_nr
+        - policy_nr
+  - contractNumber:
+      active: true
+      pattern: str-var-50
+      columns:
+        - contract_nr
+        - contract_nr
+  - reasonName:
+      active: true
+      pattern: str-var-100
+      columns:
+        - reason_nm
+        - reason_nm
+  - causeName:
+      active: true
+      pattern: str-var-200
+      columns:
+        - cause_nm
+        - cause_nm
+  - subcauseName:
+      active: true
+      pattern: str-var-100
+      columns:
+        - subcause_nm
+        - subcause_nm
+  - occurrenceDate:
+      active: true
+      pattern: date-var-10
+      columns:
+        - occurrence_dt
+        - occurrence_dt
+  - communicationDate:
+      active: true
+      pattern: date-var-10
+      columns:
+        - communication_dt
+        - communication_dt
+  - systemRecordDate:
+      active: true
+      pattern: date-var-10
+      columns:
+        - system_record_dt
+        - system_record_dt
+  - injuredPersonCode:
+      active: true
+      pattern: str-var-50
+      columns:
+        - injured_person_id
+        - injured_person_id
+  - emissionPersonCode:
+      active: true
+      pattern: str-var-50
+      columns:
+        - emission_person_id
+        - emission_person_id
+  - insuredPersonCode:
+      active: true
+      pattern: str-var-50
+      columns:
+        - insured_person_id
+        - insured_person_id
+  - agentCode:
+      active: true
+      pattern: str-var-20
+      columns:
+        - agent_cd
+        - agent_cd
+  - segmentName:
+      active: true
+      pattern: str-var-100
+      columns:
+        - segment_nm
+        - segment_nm
+  - judicalDv:
+      active: true
+      pattern: str-var-50
+      columns:
+        - judical_dv
+        - judical_dv
+  - judicalStatus:
+      active: true
+      pattern: str-var-20
+      columns:
+        - judical_status
+        - judical_status
+  - customerCode:
+      active: true
+      pattern: str-var-20
+      columns:
+        - customer_id
+        - customer_id
+  - reasonCode:
+      active: true
+      pattern: str-var-20
+      columns:
+        - reason_cd
+        - reason_cd
+  - endorsementNumber:
+      active: true
+      pattern: str-var-20
+      columns:
+        - endorsement_nr
+        - endorsement_nr
+  - currencyCode:
+      active: true
+      pattern: str-var-10
+      columns:
+        - currency_cd
+        - currency_cd

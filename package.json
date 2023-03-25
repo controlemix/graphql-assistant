@@ -1,0 +1,40 @@
+{
+  "name": "graphql-assistant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node -r esm ./src/index.js actions=start env=localhosta",
+    "restart": "node -r esm ./src/index.js actions=restart env=localhosta",
+    "full": "node -r esm ./src/index.js actions=stop,clear,install,update,build,start env=localhosta persist=true",
+    "update": "node -r esm ./src/index.js actions=stop,update env=localhosta persist=true",
+    "build": "node -r esm ./src/index.js actions=stop,clear,update,build,start env=localhosta persist=true",
+    "stop": "pm2 delete all",
+    "job": "node -r esm  ./src/index.js ",
+    "debug": "node   ./src/core/scripts/newScript.ts",
+    "postinstall": "cp -r ./packages/@lzwme ./node_modules/"
+  },
+  "keywords": [],
+  "author": "Wellington Lima",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "12.12.14",
+    "child_process": "^1.0.2",
+    "cli-color": "^2.0.3",
+    "esm": "^3.2.25",
+    "gql-generator": "^1.0.18",
+    "inquirer": "^8.0.0",
+    "js-yaml": "^4.1.0",
+    "nodemon": "^2.0.15",
+    "promise-sequence": "^1.0.0",
+    "rimraf": "^3.0.2",
+    "semver": "^7.3.8",
+    "tx2": "^1.0.5",
+    "unzip-stream": "^0.3.1",
+    "yamljs": "0.3.0"
+  },
+  "devDependencies": {
+    "npx": "^10.2.2"
+  }
+
+}

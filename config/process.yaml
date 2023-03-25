@@ -1,0 +1,69 @@
+apps:
+  - name: env
+    active: true
+    override_copy: true
+    override_version_adjust: false
+  - name: CLAIM-API
+    active: false
+    folder_module: subschema-tools
+    name_module: subgraph-tools
+    folder_proj: PROJ_CLAIM
+    folder_pack: packages
+    module_copy: true
+    version_adjust: false
+  - name: POLICY-API
+    active: false
+    folder_module: subschema-tools
+    name_module: subgraph-tools
+    folder_proj: PROJ_POLICY
+    folder_pack: packages
+    module_copy: true
+    version_adjust: false 
+  - name: CUSTOMER-API
+    active: false
+    folder_module: subschema-tools
+    name_module: subgraph-tools
+    folder_proj: PROJ_CUSTOMER
+    folder_pack: packages
+    module_copy: true
+    version_adjust: false 
+  - name: DISTRIBUTION-API
+    active: false
+    folder_module: subschema-tools
+    name_module: subgraph-tools
+    folder_proj: PROJ_DISTRIBUTION
+    folder_pack: packages
+    module_copy: true
+    version_adjust: false 
+  - name: FINANCE-API
+    active: false
+    folder_module: subschema-tools
+    name_module: subgraph-tools
+    folder_proj: PROJ_FINANCE
+    folder_pack: packages
+    module_copy: true
+    version_adjust: false 
+  - name: PRODUCT-API
+    active: true
+    folder_module: subschema-tools
+    name_module: subgraph-tools
+    folder_proj: PROJ_PRODUCT
+    folder_pack: packages
+    module_copy: true
+    version_adjust: false 
+  - name: REINSURANCE-API
+    active: true
+    folder_module: subschema-tools
+    name_module: subgraph-tools
+    folder_proj: PROJ_REINSURANCE
+    folder_pack: packages
+    module_copy: true
+    version_adjust: false 
+  - name: GATEWAY-API
+    active: false
+    folder_module: superschema-tools
+    name_module: supergraph-tools
+    folder_proj: POB.SRV0120
+    folder_pack: packages
+    module_copy: true
+    version_adjust: false 

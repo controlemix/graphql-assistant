@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0") 
+        title Novo Projeto        
+        link(rel="stylesheet", href="/static/style.css")
+        
+    body
+        .form
+            h2 Novo Projeto
+            if(msg) 
+              small=msg            
+           
+            form(action="/new_form",method="POST")
+                label(for="name_project") Nome do Projeto
+                input#name_project(type="text", name="name_project", placeholder="Ex: graphql-user-api")
+
+                label(for="ver_project") Versão do Projeto 
+                input#ver_project(type="text", name="ver_project", placeholder="Ex: 1.0.0")
+
+                label(for="name_app") Nome da App/Serviço 
+                input#name_app(type="text", name="name_app", value="",  placeholder="Ex: USER, GATEWAY ou SALE")
+                
+                label(for="environment_app") Variável de Ambiente
+                input#environment_app(type="text", name="environment_app", placeholder="Ex: development, localhost ou production")
+                
+                label(for="mod_pkg") Mod
+                select
+                    each variable in mod_pkg
+                        option(value=variable.id) #{variable.value}
+
+                label(for="feedback") Enter Your Feedback
+                textarea#feedback(name="feedback", cols="30", rows="5")
+                button(type="submit") Submit
+                script.
+                    document.getElementById('name_app').addEventListener('keyup', (event) => {
+                        if(event && event.code && event.code.includes("Key")) {
+                          console.log("Bleep!", event  );                         
+                          name_app.value =  name_app.value.toUpperCase().replace(/\s+/g, '');
+                        }
+                    })
+                    document.getElementById('name_app').addEventListener('blur', (event) => {
+                          name_app.value =  name_app.value.toUpperCase().replace(/\s+/g, '');
+
+                    })
