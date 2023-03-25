@@ -260,5 +260,9 @@ const startJobs = async () => {
 };
 
 console.log('');
-startJobs();
+// startJobs();
+
+module.exports = {
+  startJobs,
+};
 
