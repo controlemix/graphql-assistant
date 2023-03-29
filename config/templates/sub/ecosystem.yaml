@@ -38,39 +38,40 @@ apps:
         - src/index.js
         - packages
         - package.json
-      DATABASE01_USER: U1JWU1JP
-      DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
-      DATABASE01_DB_NAME: U1JP
-      DATABASE01_HOST: MTAuMTQwLjE4LjQz
+      DATABASE01_USER: DATABASE01_USER
+      DATABASE01_PASS: DATABASE01_PASS
+      DATABASE01_DB_NAME: DATABASE01_DB_NAME
+      DATABASE01_HOST: DATABASE01_HOST
       DATABASE01_PORT: 1433
       SERVICE_NAME: CLAIM
       SERVICE_MOCK: 0
       ENDPOINT_HEALTH: /.well-known/apollo/server-health
       SCHEMA_CONFIG: pattern-001.yaml
       GRAPHQL_PATH: /graphql
-      API_URL: https://api-dev.prudential.com/pob/sro/datalake/claim
+      API_URL: http://localhost:8080
       PORT: 8080
       AUTO_RESTART: 1
       GATEWAY_AUTH: 1
       GATEWAY_AUTH_TYPE: local
-      GATEWAY_CREDENTIALS_USER: lOlbDsUnQftV1lQe9NGfUGkwpLAdxzGn
-      GATEWAY_CREDENTIALS_PASS: sAUkA0OgGtzZnmEzUkXX5iRiMShLlFeczigSydD2kauCZLOeGGqjCCJtDQF4A7Uk6AaODbBjNfc0gmdXPFITnQ
-      GATEWAY_URL: https://api-dev.prudential.com/pob/sro/gateway
+      GATEWAY_CREDENTIALS_USER: GATEWAY_CREDENTIALS_USER
+      GATEWAY_CREDENTIALS_PASS: GATEWAY_CREDENTIALS_PASS
+      GATEWAY_URL: http://localhost:4000/gateway
       CORS_HEADER:
         - http://localhost:8080
-    env_localhostp:
-      namespace: localhostp
-      NODE_ENV: localhostp
-      node_args: -r esm environment=localhostp
+    
+    env_localhost:
+      namespace: localhost
+      NODE_ENV: localhost
+      node_args: -r esm environment=localhost
       watch:
         - src/schema/types
         - src/index.js
         - packages
         - package.json
-      DATABASE01_USER: U1JWU1JP
-      DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
-      DATABASE01_DB_NAME: U1JP
-      DATABASE01_HOST: MTAuMTQwLjE4LjQz
+      DATABASE01_USER: DATABASE01_USER
+      DATABASE01_PASS: DATABASE01_PASS
+      DATABASE01_DB_NAME: DATABASE01_DB_NAME
+      DATABASE01_HOST: DATABASE01_HOST
       DATABASE01_PORT: 1433
       SERVICE_NAME: CLAIM
       SERVICE_MOCK: 0
@@ -82,38 +83,9 @@ apps:
       AUTO_RESTART: 1
       GATEWAY_AUTH: 1
       GATEWAY_AUTH_TYPE: local
-      GATEWAY_CREDENTIALS_USER: lOlbDsUnQftV1lQe9NGfUGkwpLAdxzGn
-      GATEWAY_CREDENTIALS_PASS: sAUkA0OgGtzZnmEzUkXX5iRiMShLlFeczigSydD2kauCZLOeGGqjCCJtDQF4A7Uk6AaODbBjNfc0gmdXPFITnQ
-      GATEWAY_URL: https://api-dev.prudential.com/pob/sro/gateway:4000
-      CORS_HEADER:
-        - http://localhost:8080
-    env_localhosta:
-      namespace: localhosta
-      NODE_ENV: localhosta
-      node_args: -r esm environment=localhosta
-      watch:
-        - src/schema/types
-        - src/index.js
-        - packages
-        - package.json
-      DATABASE01_USER: c2E=
-      DATABASE01_PASS: U3JvcHJvZDE0MzMwIQ==
-      DATABASE01_DB_NAME: U1JP
-      DATABASE01_HOST: MzQuMjM3LjE1Ny4xNTQ=
-      DATABASE01_PORT: 14330
-      SERVICE_NAME: CLAIM
-      SERVICE_MOCK: 0
-      ENDPOINT_HEALTH: /.well-known/apollo/server-health
-      SCHEMA_CONFIG: pattern-001.yaml
-      GRAPHQL_PATH: /graphql
-      API_URL: http://localhost:8019
-      PORT: 8019
-      AUTO_RESTART: 1
-      GATEWAY_AUTH: 1
-      GATEWAY_AUTH_TYPE: local
-      GATEWAY_CREDENTIALS_USER: lOlbDsUnQftV1lQe9NGfUGkwpLAdxzGn
-      GATEWAY_CREDENTIALS_PASS: sAUkA0OgGtzZnmEzUkXX5iRiMShLlFeczigSydD2kauCZLOeGGqjCCJtDQF4A7Uk6AaODbBjNfc0gmdXPFITnQ
-      GATEWAY_URL: https://api-dev.prudential.com/pob/sro/gateway:4000
+      GATEWAY_CREDENTIALS_USER: GATEWAY_CREDENTIALS_USER
+      GATEWAY_CREDENTIALS_PASS: GATEWAY_CREDENTIALS_PASS
+      GATEWAY_URL: http://localhost:4000/gateway
       CORS_HEADER:
         - http://localhost:8080
     env_test:
@@ -121,10 +93,10 @@ apps:
       NODE_ENV: test
       node_args: -r esm environment=test
       watch: false
-      DATABASE01_USER: U1JWU1JP
-      DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
-      DATABASE01_DB_NAME: U1JP
-      DATABASE01_HOST: MTAuMTQwLjE4LjQz
+      DATABASE01_USER: DATABASE01_USER
+      DATABASE01_PASS: DATABASE01_PASS
+      DATABASE01_DB_NAME: DATABASE01_DB_NAME
+      DATABASE01_HOST: DATABASE01_HOST
       DATABASE01_PORT: 1433
       SERVICE_NAME: CLAIM
       SERVICE_MOCK: 1

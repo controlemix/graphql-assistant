@@ -31,44 +31,29 @@ ecosystem:
       - src/index.js
       - packages
       - package.json
-    DATABASE01_USER: U1JWU1JP
-    DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
-    DATABASE01_DB_NAME: U1JP
-    DATABASE01_HOST: MTAuMTQwLjE4LjQz
+    DATABASE01_USER: DATABASE01_USER
+    DATABASE01_PASS: DATABASE01_PASS
+    DATABASE01_DB_NAME: DATABASE01_DB_NAME
+    DATABASE01_HOST: DATABASE01_HOST
     DATABASE01_PORT: 1433
     PORT: 8080
-    API_URL: https://api-dev.prudential.com/pob/sro/gateway
+    API_URL: http://localhost:4000/gateway
 
-  localhostp:
-    namespace: localhostp
-    NODE_ENV: localhostp
-    node_args: -r esm environment=localhostp
+
+
+  localhost:
+    namespace: localhost
+    NODE_ENV: localhost
+    node_args: -r esm environment=localhost
     watch:
       - src/schema/types
       - src/index.js
       - packages
       - package.json
-    DATABASE01_USER: U1JWU1JP
-    DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
-    DATABASE01_DB_NAME: U1JP
-    DATABASE01_HOST: MTAuMTQwLjE4LjQz
-    DATABASE01_PORT: 1433
-    PORT: 8019
-    API_URL: http://localhost:8019
-
-  localhosta:
-    namespace: localhosta
-    NODE_ENV: localhosta
-    node_args: -r esm environment=localhosta
-    watch:
-      - src/schema/types
-      - src/index.js
-      - packages
-      - package.json
-    DATABASE01_USER: U1JWU1JP
-    DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
-    DATABASE01_DB_NAME: U1JP
-    DATABASE01_HOST: MTAuMTQwLjE4LjQz
+    DATABASE01_USER: DATABASE01_USER
+    DATABASE01_PASS: DATABASE01_PASS
+    DATABASE01_DB_NAME: DATABASE01_DB_NAME
+    DATABASE01_HOST: DATABASE01_HOST
     DATABASE01_PORT: 1433
     PORT: 8019
     API_URL: http://localhost:8019
@@ -82,10 +67,10 @@ ecosystem:
       - src/index.js
       - packages
       - package.json
-    DATABASE01_USER: U1JWU1JP
-    DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
-    DATABASE01_DB_NAME: U1JP
-    DATABASE01_HOST: MTAuMTQwLjE4LjQz
+    DATABASE01_USER: DATABASE01_USER
+    DATABASE01_PASS: DATABASE01_PASS
+    DATABASE01_DB_NAME: DATABASE01_DB_NAME
+    DATABASE01_HOST: DATABASE01_HOST
     DATABASE01_PORT: 1433
     PORT: 0
     API_URL: http://localhost:8019

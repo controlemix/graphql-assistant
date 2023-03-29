@@ -11,7 +11,7 @@ api:
   recreateFields: true
 package:
   recreate: true
-  name: pob-sro-graphql-policy
+  name: graphql-policy
   version: 2.0.0
   dependencies:
     - subgraph-tools: 'file:packages/subgraph-tools-1.3.7.tgz'
@@ -20,19 +20,19 @@ ecosystem:
   GRAPHQL_PATH: /
   SCHEMA_CONFIG: pattern-001.yaml
   development:
-    DATABASE01_USER: U1JWU1JP
-    DATABASE01_PASS: UHJ1RDIwMjEwM1Bybw==
-    DATABASE01_DB_NAME: U1JP
-    DATABASE01_HOST: MTAuMTQwLjE4LjQz
+    DATABASE01_USER: DATABASE01_USER
+    DATABASE01_PASS: DATABASE01_PASS
+    DATABASE01_DB_NAME: DATABASE01_DB_NAME
+    DATABASE01_HOST: DATABASE01_HOST
     DATABASE01_PORT: 1433
     PORT: 8080
-    API_URL: 'https://api-dev.prudential.com/pob/sro/gateway'
+    API_URL: 'http://localhost:4000/gateway'
   localhost:
-    DATABASE01_USER: c2E=
-    DATABASE01_PASS: U3JvcHJvZDE0MzMwIQ==
-    DATABASE01_DB_NAME: U1JP
-    DATABASE01_HOST: MzQuMjM3LjE1Ny4xNTQ=
-    DATABASE01_PORT: 14330
+    DATABASE01_USER: DATABASE01_USER
+    DATABASE01_PASS: DATABASE01_PASS
+    DATABASE01_DB_NAME: DATABASE01_DB_NAME
+    DATABASE01_HOST: DATABASE01_HOST
+    DATABASE01_PORT: 1433
     PORT: 8093
     API_URL: 'http://localhost:8093'
     watch:

@@ -30,85 +30,13 @@ projects:
     veradjust_proj: false
     veradjust_repo: false
 
-  - name: CLAIM
-    mod_type: subgraph
-    modVer: 1.3.7
-    active_proj: true
-    active_repo: false
-    folder_proj: PROJ-119-CLAIM
-    folder_repo: POB.SRV0119
-    modcopy_proj: true
-    modcopy_repo: false
-    veradjust_proj: false
-    veradjust_repo: false
-
   - name: POLICY
     mod_type: subgraph
     modVer: 1.3.7
     active_proj: true
     active_repo: false
-    folder_proj: PROJ-123-POLICY
-    folder_repo: POB.SRV0123
-    modcopy_proj: true
-    modcopy_repo: false
-    veradjust_proj: false
-    veradjust_repo: false
-
-  - name: CUSTOMER
-    mod_type: subgraph
-    modVer: 1.3.7  
-    active_proj: true
-    active_repo: false
-    folder_proj: PROJ-130-CUSTOMER
-    folder_repo: POB.SRV0130
-    modcopy_proj: true
-    modcopy_repo: false
-    veradjust_proj: false
-    veradjust_repo: false
-
-  - name: FINANCE
-    mod_type: subgraph
-    modVer: 1.3.7  
-    active_proj: true
-    active_repo: false
-    folder_proj: PROJ-133-FINANCE
-    folder_repo: POB.SRV0133
-    modcopy_proj: true
-    modcopy_repo: false
-    veradjust_proj: false
-    veradjust_repo: false
-
-  - name: DISTRIBUTION
-    mod_type: subgraph
-    modVer: 1.3.7  
-    active_proj: true
-    active_repo: false
-    folder_proj: PROJ-131-DISTRIBUTION
-    folder_repo: POB.SRV0131
-    modcopy_proj: true
-    modcopy_repo: false
-    veradjust_proj: false
-    veradjust_repo: false
-
-  - name: PRODUCT
-    mod_type: subgraph
-    modVer: 1.3.7  
-    active_proj: true
-    active_repo: false
-    folder_proj: PROJ-134-PRODUCT
-    folder_repo: POB.SRV0134
-    modcopy_proj: true
-    modcopy_repo: false
-    veradjust_proj: false
-    veradjust_repo: false
-
-  - name: REINSURANCE
-    mod_type: subgraph
-    modVer: 1.3.7    
-    active_proj: true
-    active_repo: false
-    folder_proj: PROJ-135-REINSURANCE
-    folder_repo: POB.SRV0135
+    folder_proj: PROJ-002-POLICY
+    folder_repo: REP.SRV002
     modcopy_proj: true
     modcopy_repo: false
     veradjust_proj: false
@@ -119,8 +47,8 @@ projects:
     modVer: 1.3.7
     active_proj: true
     active_repo: false
-    folder_proj: PROJ-120-GATEWAY
-    folder_repo: POB.SRV0120
+    folder_proj: PROJ-001-GATEWAY
+    folder_repo: REP.SRV001
     modcopy_proj: true
     modcopy_repo: false
     veradjust_proj: false
